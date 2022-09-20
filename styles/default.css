@@ -1,0 +1,31 @@
+
+/*https://coolors.co/949474-a3a380-d6ce93-efebce-d8a48f-bb8588-c19093-c79a9d*/
+body
+{
+    font-family:'segoe UI',Tahoma, Geneva, Verdana, sans-serif;
+    color:silver;
+    background-color:teal;
+}
+header,footer
+{
+    text-align:center;
+
+}
+
+main
+{
+    margin-left:200px;
+    margin-right:200px;
+}
+
+nav
+{
+    font-size: 150%;
+}
+a
+{
+    text-decoration:none;
+    color:orange;
+}
+
+a:hover{ color:red;}

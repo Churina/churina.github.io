@@ -6,6 +6,7 @@ body
     color:silver;
     background-color:teal;
 }
+
 header,footer
 {
     text-align:center;
@@ -22,6 +23,7 @@ nav
 {
     font-size: 150%;
 }
+
 a
 {
     text-decoration:none;

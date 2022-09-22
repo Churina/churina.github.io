@@ -31,3 +31,7 @@ a
 }
 
 a:hover{ color:red;}
+
+main h2 {text-align: center;}
+.list{display:block;
+    margin:0 auto;}

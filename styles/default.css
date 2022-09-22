@@ -4,7 +4,7 @@ body
 {
     font-family:'segoe UI',Tahoma, Geneva, Verdana, sans-serif;
     color:silver;
-    background-color:teal;
+    background-color:rgb(128, 0, 96);
 }
 
 header,footer
@@ -38,4 +38,3 @@ figure{text-align: center;}
 
 h2,h3{display: flex; 
       justify-content:center;}
-      

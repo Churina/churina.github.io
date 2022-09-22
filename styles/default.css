@@ -34,4 +34,5 @@ a:hover{ color:red;}
 .list{display: flex;
 justify-content:center;}
 
-h2{text-align: center;}
+h2,h3{display: flex;
+    justify-content:center;}

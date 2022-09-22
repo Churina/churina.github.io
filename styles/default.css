@@ -31,7 +31,6 @@ a
 }
 
 a:hover{ color:red;}
+.list{display: flex;
+justify-content:center;}
 
-main h2 {text-align: center;}
-.list{display:block;
-    margin:0 auto;}

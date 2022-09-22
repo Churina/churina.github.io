@@ -7,66 +7,50 @@
         <link href="styles/default.css" rel="stylesheet"/>
     </head>    
     <body>
-        <header>
-            <!--all the stuff for the whole stile that belongs in the header-->
-            <h1>Churina Sa's Clumsy Sloth | CP-CO-01</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="introduction.html">Introduction</a>
-                <a href="contract.html">Contract</a>
-                <a href="about_us.html">Team</a>
-            </nav>
-        </header>
+        <div data-include="components/header.html"></div>
             <hr>
             </hr>
         <main>
-            <h2>Introduction — Churina Sa</h2>
-            <figure>
-                <img src="images/churina.jpg" 
-                    alt="Disney World August 2022"
-                    hight="300" width="300" >
-                <figcaption>Disney World, August 2022</figcaption>
-            </figure>
-                <ul>
-                    <li>
-                        <strong>Personal background:</strong>I am a Mongolian from China. I moved to the US 3 years ago. I have a daughter who is 13 years old. My husband is a Hvac tech. We have a lovely cat  named Mumu.        
-                    </li>
-                    <li>
-                        <strong>Academic background:</strong> I got my phd degree in 2009. After that I worked as a professor in a Chinese University. When I moved to the US, I noticed I needed to change my career. So being a software engineer is my goal in this country!
-                    </li>
-                    <li>
-                        <strong>Background in this subject: </strong> I don't have much experience in this field. But I self learned some basic coding from Youtube and datacamp.        
-                    </li>
-                    <li>
-                        <strong>Primary Computer Platform:</strong>  I use windows at home. I used to try Mac before. But I can't get used to the system. So I prefer Windows.
-                    </li>
-                    <li>
-                        <strong>Courses I'm Taking & Why:</strong>
-                        <ul>
-                            <li>CRO7000-01: CO Programming: <a href="https://churina.github.io/">My Github Pages</a> </li>
-                            <li>FreeCodeCamp: <a href="https://www.freecodecamp.org/Churina"> My FreeCodeCamp Page </a> </li> 
-                            <li>Codecademy: <a href="https://www.codecademy.com/learn">My Codeademy Pages</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Funny/Interesting item about yourself:</strong> I used to be a vegetarian, but my husband keeps saying "you have to eat meat because meat can provide you with necessary nutrients". As a result, I am eating some chicken and fish now. Haha~~
-                    </li>
-                    <li>
-                        <strong>I'd also like to share:</strong> I can speak Chinese, Mongolian and English.
-                    </li>
-                </ul>
+            <div>
+                <h2>Introduction — Churina Sa</h2>
+                <figure>
+                    <img src="images/churina.jpg" 
+                        alt="Disney World August 2022"
+                        hight="300" width="300" >
+                    <figcaption>Disney World, August 2022</figcaption>
+                </figure>
+                    <ul>
+                        <li>
+                            <strong>Personal background:</strong>I am a Mongolian from China. I moved to the US 3 years ago. I have a daughter who is 13 years old. My husband is a Hvac tech. We have a lovely cat  named Mumu.        
+                        </li>
+                        <li>
+                            <strong>Academic background:</strong> I got my phd degree in 2009. After that I worked as a professor in a Chinese University. When I moved to the US, I noticed I needed to change my career. So being a software engineer is my goal in this country!
+                        </li>
+                        <li>
+                            <strong>Background in this subject: </strong> I don't have much experience in this field. But I self learned some basic coding from Youtube and datacamp.        
+                        </li>
+                        <li>
+                            <strong>Primary Computer Platform:</strong>  I use windows at home. I used to try Mac before. But I can't get used to the system. So I prefer Windows.
+                        </li>
+                        <li>
+                            <strong>Courses I'm Taking & Why:</strong>
+                            <ul>
+                                <li>CRO7000-01: CO Programming: <a href="https://churina.github.io/">My Github Pages</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Funny/Interesting item about yourself:</strong> I used to be a vegetarian, but my husband keeps saying "you have to eat meat because meat can provide you with necessary nutrients". As a result, I am eating some chicken and fish now. Haha~~
+                        </li>
+                        <li>
+                            <strong>I'd also like to share:</strong> I can speak Chinese, Mongolian and English.
+                        </li>
+                    </ul>
+            </div>
+           
         </main>
                 <hr>
                 </hr>
-        <footer>
-            <!--all the stuff for the whole stile that belongs in the header-->
-            <nav>
-                <a href="https://github.com/Churina" target="_blank">Github</a>&nbsp;    
-                <a href="https://churina.github.io/" target="_blank">Github.io</a>&nbsp;      
-                <a href="https://www.freecodecamp.org/Churina" target="_blank">freeCodeCamp</a>&nbsp;      
-                <a href="https://www.codecademy.com/learn" target="_blank">Codeacademy</a>&nbsp;      
-                <a href="https://www.linkedin.com/learning/?accountId=76141674&u=76141674&success=true&authUUID=ug33bZsWQtqFR8p51EcteA%3D%3D" target="_blank">LinkedIn learning</a>
-            </nav>
-        </footer>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
     </body>
 </html>

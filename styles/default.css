@@ -71,7 +71,25 @@ footer
 
 h1{margin:0;}
 
-.say hello
+.sayhello
 {
-    text-size:30px;
+  font-size:40px;
+  font-family:cursive;
+  color:#cba135;
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+  } 
+
+.introductionforme
+{
+    font-family:cursive;
+    font-size:20px;
+    margin:80px 180px;
+
+}
+

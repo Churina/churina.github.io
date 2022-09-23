@@ -20,8 +20,9 @@ header{padding:25px 0 0 0;}
 main
 {
     margin:10px;
-    padding: 10px 100px;
+    padding: 10px 150px;
     height:600px;
+    font-size:large;
 }
 
 nav a
@@ -51,9 +52,6 @@ a:hover
 }
 
 figure {text-align: center;}
-
-
-
 
 h2,h3
 {
@@ -98,3 +96,4 @@ h1{margin:0;}
     font-size:20px;
     font-family:cursive;
 }
+

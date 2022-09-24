@@ -97,3 +97,14 @@ h1{margin:0;}
     font-family:cursive;
 }
 
+button
+{
+    display: block;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 15px auto;
+    width: 20%;
+    padding: 10px 0;
+    font-size: 20px;
+    background: #aeaeb1;
+    border: 3px solid #3b3b4f;
+    border-radius: 10px;

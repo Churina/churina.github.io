@@ -5,8 +5,8 @@ body
     font-family:'segoe UI',Tahoma, Geneva, Verdana, sans-serif;
     color:silver;
     background-color:#13293D;
-    padding:0;
-    margin:0;
+    padding:20px;
+    margin:20px;
 }
  
 header,footer
@@ -19,7 +19,7 @@ header{padding:25px 0 0 0;}
 
 main
 {
-    margin:10px;
+    margin:50px;
     padding: 10px 150px;
     height:650px;
     font-size:large;
@@ -77,7 +77,6 @@ h3
     font-size:20px;
 }
 
-
 .center {
     display: flex;
     justify-content: center;
@@ -90,13 +89,12 @@ h3
     font-family:cursive;
     font-size:20px;
     margin:80px 180px;
-
 }
 
-.ivalue
+p
 {
     font-size:20px;
-    font-family:cursive;
+    font-family: "Gill Sans", sans-serif;
 }
 
 button
@@ -110,3 +108,4 @@ button
     background: #aeaeb1;
     border: 3px solid #3b3b4f;
     border-radius: 10px;
+

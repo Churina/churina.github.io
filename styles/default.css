@@ -53,11 +53,6 @@ a:hover
 
 figure {text-align: center;}
 
-h2,h3
-{
-    text-align: center;
-}
-
 .top-nav{font-size: medium;}
 
 header nav a {color:yellow;}
@@ -67,14 +62,21 @@ footer
     height: 50px;
 }
 
-h1{margin:0;}
-
-.sayhello
+h2
 {
+  text-align: center;
   font-size:40px;
   font-family:cursive;
   color:#cba135;
 }
+
+h3
+{
+    text-align: center;
+    font-family:cursive;
+    font-size:20px;
+}
+
 
 .center {
     display: flex;

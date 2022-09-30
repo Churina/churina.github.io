@@ -20,27 +20,29 @@
             let startNumber =1;
             let endNumber = 100;
 
-            for ( let counter = startNumber; counter <= endNumber ; counter = counter + 1 )//or counter++
+            for(let counter = startNumber; counter <= endNumber; counter = counter + 1) // or counter++
+          {
+            output = output + "<li>";
+
+            if ((counter % 3 == 0) && (counter % 5 == 0)) 
             {
-                output = output + "<li>";
-                if(counter % 2 == 0) // it's even.
-                {
-                    output = output + "FIZZ";
-                }
-                else if
-                {
-                    output = output +"BUZZ";
-                }
-                
-                else
-                {
-                    output=output + counter;
-                }
-
-
-                 output = output + "</li>";
+              output = output + "FizzBuzz";
+            }
+            else if(counter % 3 == 0) 
+            {
+              output = output + "Fizz";
+            }
+            else if(counter % 5 == 0)
+            {
+              output = output + "Buzz";
+            }
+            else
+            {
+              output = output + counter;
             }
 
+            output = output + "</li>";
+          }
             document.getElementById("results").innerHTML=output;
            </script>
         </main>

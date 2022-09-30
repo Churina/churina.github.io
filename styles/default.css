@@ -61,7 +61,7 @@ a:hover
     justify-content:center;
     padding-top:0;
     font-size: 20px;
-    margin:auto;
+    margin:0 auto 50px;
 }
 .list li a{
     color:#cba135;
@@ -70,11 +70,6 @@ a:hover
 main li
 {
     line-height:1.5em;
-}
-
-ul
-{
-    margin:0 auto 50px;
 }
 
 figure 

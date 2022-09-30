@@ -1,27 +1,39 @@
 
 /*https://coolors.co/949474-a3a380-d6ce93-efebce-d8a48f-bb8588-c19093-c79a9d*/
+html
+{
+    background-color: #457B9D;
+    height:100%;
+}
+
 body
 {
     font-family:'segoe UI',Tahoma, Geneva, Verdana, sans-serif;
     color:silver;
+    width:80%;
+    margin:auto;
     background-color:#13293D;
-    padding:20px;
-    margin:20px;
 }
  
-header,footer
+header
 {
-    text-align:center;
-    
-}
+    text-align: center;
+    padding:10px 0;
 
-header{padding:25px 0 0 0;}
+}
+    
+footer
+{
+    position:relative;
+    display:flex;
+    text-align: center;
+}
 
 main
 {
-    margin:50px;
-    padding: 10px 150px;
-    height:650px;
+    display:block;
+    margin:0 100px;
+    padding:0 10px;
     font-size:large;
 }
 
@@ -29,16 +41,13 @@ nav a
 {
     font-size: 120%;
     margin-right:30px;
+    color:orange;
+    text-decoration:none;
 }
 
 nav
 {
     margin-top:10px;}
-a
-{
-    text-decoration:none;
-    color:orange;
-}
 
 a:hover
 {
@@ -49,17 +58,34 @@ a:hover
 {
     display: flex;
     justify-content:center;
+    padding-top:0;
+}
+.list li a{
+    color:#cba135;
+    text-decoration: none;
 }
 
-figure {text-align: center;}
+figure 
+{
+    text-align: center;
+}
 
-.top-nav{font-size: medium;}
-
-header nav a {color:yellow;}
 
 footer
 {
-    height: 50px;
+    display: block;;
+}
+
+footer p{
+    font-size: medium;
+    color: #457B9D;
+}
+
+footer p a
+{
+    font-size: medium;
+    color: #457B9D;
+    text-decoration: none;
 }
 
 h2
@@ -77,22 +103,11 @@ h3
     font-size:20px;
 }
 
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-  } 
-
-.introductionforme
-{
-    font-family:cursive;
-    font-size:20px;
-    margin:80px 180px;
-}
 
 p
 {
+    margin:auto;
+    padding:10px;
     font-size:20px;
     font-family: "Gill Sans", sans-serif;
 }
@@ -101,11 +116,9 @@ button
 {
     display: block;
     font-family:Arial, Helvetica, sans-serif;
-    margin: 15px auto;
-    width: 20%;
-    padding: 10px 0;
+    margin:50px auto 100px;
     font-size: 20px;
     background: #aeaeb1;
-    border: 3px solid #3b3b4f;
+    border: 5px solid #3b3b4f;
     border-radius: 10px;
-
+    

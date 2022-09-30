@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> FizzBuzz </title>
+        <link href="styles/default.css" rel="stylesheet"/>
+    </head>    
+    <body>
+        <div data-include="components/header.html"></div>
+        <main>
+                <h2>FizzBuzz Baby</h2>
+                <h3>
+                    Contant will go here.
+                </h3>
+                <p id="results"> </p>
+           <script>
+            console.log("This script is running in the fizzbuzz page.");
+            let output="";
+            let startNumber =1;
+            let endNumber = 100;
+
+            for ( let counter = startNumber; counter <= endNumber ; counter = counter + 1 )//or counter++
+            {
+                output = output + "<li>";
+                if(counter % 2 == 0) // it's even.
+                {
+                    output = output + "FIZZ";
+                }
+                else if
+                {
+                    output = output +"BUZZ";
+                }
+                
+                else
+                {
+                    output=output + counter;
+                }
+
+
+                 output = output + "</li>";
+            }
+
+            document.getElementById("results").innerHTML=output;
+           </script>
+        </main>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
+    </body>
+</html>

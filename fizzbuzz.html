@@ -10,10 +10,9 @@
         <div data-include="components/header.html"></div>
         <main>
         <h2>FizzBuzzBang</h2>
-        <button type="button" onclick="fizzBuzzBang()">Click Me </button>
+        <button type="button" onclick="document.getElementById('results').innerHTML=output">Click Me </button>
         <p id="results" style="text-align:center"></p>
         <script>
-            function fizzBuzzBang() {
               let output = "";
               let startNumber = 1;
               let endNumber = 120;
@@ -35,9 +34,7 @@
                 } else {
                   output = output + counter + "<br>";
                 }
-                  document.getElementById("results").innerHTML=output;
               }
-            }
         </script>
         </main>
         <div data-include="components/footer.html"></div>

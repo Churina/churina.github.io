@@ -9,7 +9,40 @@ function fizzBuzz(num){
 
 fizzBuzz(6);
 
-
+/* This is also correct.
+ <main>
+        <h2>FizzBuzzBang</h2>
+        <button type="button" onclick="fizzBuzzBang()">Click Me </button>
+        <p id="results" style="text-align:center"></p>
+        <script>
+            function fizzBuzzBang() {
+              let output = "";
+              let startNumber = 1;
+              let endNumber = 120;
+              for (let counter = startNumber; counter <= endNumber; counter++) {
+                if (counter % 3 == 0 && counter % 5 == 0 && counter % 7 == 0) {
+                  output = output + "FizzBuzzBang!!!" + "<br>";
+                } else if (counter % 3 == 0 && counter % 5 == 0) {
+                  output = output + "FizzBuzz!!" + "<br>";
+                } else if (counter % 5 == 0 && counter % 7 == 0) {
+                  output = output + "BuzzBang!!" + "<br>";
+                } else if (counter % 3 == 0 && counter % 7 == 0) {
+                  output = output + "FizzBang!!" + "<br>";
+                } else if (counter % 3 == 0) {
+                  output = output + "Fizz" + "<br>";
+                } else if (counter % 5 == 0) {
+                  output = output + "Buzz" + "<br>";
+                } else if (counter % 7 == 0) {
+                  output = output + "Bang" + "<br>";
+                } else {
+                  output = output + counter + "<br>";
+                }
+                  document.getElementById("results").innerHTML=output;
+              }
+            }
+        </script>
+        </main>
+*/
 
 
 /*

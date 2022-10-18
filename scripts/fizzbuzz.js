@@ -6,10 +6,39 @@ function fizzBuzz(num){
         else console.log(i);
     }
 }
-
 fizzBuzz(6);
 
-/* This is also correct.
+
+/* This is correct.
+    <p id="demo"></p>
+    <script>
+             let output = "";
+              for (let i = 1; i < 100; i++){
+                if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0) {
+                  output = output + "FizzBuzzBang!!!" + "<br>";
+                } else if (i% 3 == 0 && i % 5 == 0) {
+                  output = output + "FizzBuzz!!" + "<br>";
+                } else if (i % 5 == 0 && i % 7 == 0) {
+                  output = output + "BuzzBang!!" + "<br>";
+                } else if (i % 3 == 0 && i % 7 == 0) {
+                  output = output + "FizzBang!!" + "<br>";
+                } else if (i % 3 == 0) {
+                  output = output + "Fizz" + "<br>";
+                } else if (i % 5 == 0) {
+                  output = output + "Buzz" + "<br>";
+                } else if (i% 7 == 0) {
+                  output = output + "Bang" + "<br>";
+                } else {
+                 output = output + i + "<br>";
+                }
+              }
+              document.getElementById('demo').innerHTML=output;          
+    </script>
+*/
+
+
+
+/* This is also correct. using fuction.
  <main>
         <h2>FizzBuzzBang</h2>
         <button type="button" onclick="fizzBuzzBang()">Click Me </button>

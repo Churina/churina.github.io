@@ -1,4 +1,4 @@
-  pages:
+pages:
   stage: deploy
   script:
   - mkdir .public
@@ -9,3 +9,4 @@
     - public
   only:
   - main
+

@@ -8,7 +8,7 @@ html
 
 body
 {
-    font-family:'segoe UI',Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:silver;
     width:80%;
     margin:auto;
@@ -19,7 +19,6 @@ header
 {
     text-align: center;
     padding:10px 0;
-
 }
     
 footer
@@ -38,38 +37,51 @@ main
 
 }
 
-nav a
+nav
 {
-    font-size: 120%;
+    display:flex;
+    justify-content: center;
+    margin-top:0;
+    padding:0;
+}
+
+a
+{
+    font-size:larger;
     margin-right:30px;
     color:orange;
     text-decoration:none;
 }
 
-nav
-{
-    margin-top:10px;}
-
 a:hover
 {
-     color:red;
-    }
+    color:red;
+}
 
 .list
 {
     display: flex;
     justify-content:center;
     padding-top:0;
-    font-size: 20px;
+    font-size: 15px;
     margin:0 auto 50px;
 }
+
 .list li a{
     color:#cba135;
     text-decoration: none;
 }
+
 main li
 {
     line-height:1.5em;
+    font-size: larger;
+    list-style-type:square;
+}
+
+main nav li
+{
+    float:left;
 }
 
 figure 
@@ -92,35 +104,81 @@ footer p a
 h2
 {
   text-align: center;
-  font-size:40px;
-  font-family:cursive;
+  font-size:35px;
+  font-family:Arial, Helvetica, sans-serif;
   color:#cba135;
 }
 
 h3
 {
     text-align: center;
-    font-family:cursive;
-    font-size:20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:30px;
+    color:#EDE580;
+    margin:10px;
+    padding: 1opx;
 }
-
 
 p
 {
     margin:auto;
     padding:10px;
-    font-size:20px;
-    font-family: "Gill Sans", sans-serif;
+    font-size:larger;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height:1.5em;
 }
 
 button
 {
     display: block;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial, Tahoma, sans-serif;
     margin:50px auto 100px;
     font-size: 20px;
     background: #aeaeb1;
     border: 5px solid #3b3b4f;
     border-radius: 10px;
-    
+}
+
+h4
+{
+    color:#C3DFE0;
+    font-size: 25px;
+    text-align: center;
+}
+
+dt,dd
+{
+    line-height:2em; 
+    font-size: larger;
+}
+
+.background
+{
+    background-color: rgb(241, 241, 193);
+    width: 33%;
+}
+
+.summary
+{
+    border:2px solid rgb(10, 11, 1);
+    border-collapse: collapse;
+    width: 33%;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:rgb(241, 241, 193);
+    font-size:larger;
+    font-weight:bold;
+    margin:10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    color: #3b3b4f;
+    text-align: center;
+    border:2px solid rgb(10, 11, 1);
+  }
+
+hr.line
+{
+    border: 2px solid #457B9D;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Template</title>
+        <link href="styles/default.css" rel="stylesheet">
+    </head>    
+    <body>
+        <div data-include="components/header.html"></div>
+        <hr>
+        <main>
+                <h2>Kelvin Converter</h2>
+                <p id="convert"></p>
+                <script>
+let kelvin;
+kelvin = prompt ("enter the kelvin degree");
+Ferenheit = (kelvin -273.15) * 9/5 +32;
+console.log("you entered" + kelvin + "degree which convert to "+ Ferenheit + "degree.")
+
+
+
+                    function toCelcius(f){
+                        return (5/9)*(f-32);
+                    }
+                document.getElementById ("convert").innerHTML = toCelcius(123);
+                </script>
+        </main>
+        <hr>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
+    </body>
+</html>

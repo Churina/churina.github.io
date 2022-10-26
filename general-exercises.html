@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Template</title>
+        <link href="styles/default.css" rel="stylesheet">
+    </head>    
+    <body>
+        <div data-include="components/header.html"></div>
+        <hr>
+        <main>
+                <h2>Kelvin to Fahrenheit Converter</h2>
+                Kelvin: <input type="number" id="kelvin" placeholder="Enter the Kelvin Temperature">
+                <button onclick="kelvinToFahrenheit()">Try it</button>
+                <p id="kelvinToFahrenheit"></p>
+                <script>
+                    function kelvinToFahrenheit() {
+                      let temperatureInKelvin= document.getElementById("kelvin").value;
+                      temperatureInFahrenheit = (temperatureInKelvin - 273.15)*9/5 + 32;
+                      document.getElementById("kelvinToFahrenheit").innerHTML = temperatureInFahrenheit;
+                    }
+                </script>
+        </main>
+        <hr>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
+    </body>
+</html>

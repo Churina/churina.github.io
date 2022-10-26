@@ -10,17 +10,31 @@
         <div data-include="components/header.html"></div>
         <hr>
         <main>
-                <h2>Kelvin to Fahrenheit Converter</h2>
+            <div>
+                <h4>Kelvin to Fahrenheit Converter</h4>
                 Kelvin: <input type="number" id="kelvin" placeholder="Enter the Kelvin Temperature">
                 <button onclick="kelvinToFahrenheit()">Try it</button>
-                <p id="kelvinToFahrenheit"></p>
-                <script>
-                    function kelvinToFahrenheit() {
-                      let temperatureInKelvin= document.getElementById("kelvin").value;
-                      temperatureInFahrenheit = (temperatureInKelvin - 273.15)*9/5 + 32;
-                      document.getElementById("kelvinToFahrenheit").innerHTML = parseInt(temperatureInFahrenheit);
+                The result is :<label id="kelvinToFahrenheit"></label>   
+            </div>
+            <div>
+                <h4>Fahrenheit to Celcius Converter</h4>
+                Fahrenheit: <input type="number" id="Fahrenheit" placeholder="Enter the Fahrenheit Temperature">
+                <button onclick="fahrenheitToCelcius()">Try it</button>
+                The result is :<label id="fahrenheitToCelcius"></label>   
+            </div>
+            <script>
+                function kelvinToFahrenheit() {
+                let temperatureInKelvin= document.getElementById("kelvin").value;
+                temperatureInFahrenheit = (temperatureInKelvin - 273.15)*9/5 + 32;
+                document.getElementById("kelvinToFahrenheit").innerHTML = parseInt(temperatureInFahrenheit);
                     }
-                </script>
+
+                function fahrenheitToCelcius() {
+                let temperatureInFahrenheit= document.getElementById("Fahrenheit").value;
+                temperatureInCelcius = (5/9) *(temperatureInFahrenheit - 32);
+                document.getElementById("fahrenheitToCelcius").innerHTML = parseInt(temperatureInCelcius);
+                    }
+            </script>
         </main>
         <hr>
         <div data-include="components/footer.html"></div>

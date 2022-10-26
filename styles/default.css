@@ -122,16 +122,6 @@ th, td
     text-align: center;
 }
 
-button
-{
-    display: block;
-    margin:20px auto;
-    font-size: 20px;
-    background: #aeaeb1;
-    border: 5px solid #3b3b4f;
-    border-radius: 10px;
-}
-
 hr
 {
     border: 2px solid #457B9D;
@@ -192,4 +182,14 @@ footer p a
 #results
 {
     text-align:center;
+}
+
+.fizzBuzz
+{
+    display: block;
+    margin:20px auto;
+    font-size: 20px;
+    background: #aeaeb1;
+    border: 5px solid #3b3b4f;
+    border-radius: 10px;
 }

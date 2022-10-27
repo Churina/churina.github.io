@@ -35,6 +35,24 @@
                 document.getElementById("fahrenheitToCelcius").innerHTML = parseInt(temperatureInCelcius);
                     }
             </script>
+
+
+            <h4>Divider</h4>
+            <input type="number" id="number-a" placeholder="Enter the number">
+            <input type="number" id="number-b" placeholder="Enter the number">
+            <button onclick="divider()">click Me</button> The result is:<p id="demo"></p>
+            <p id="demo"></p>
+            <script>        
+                function divider(){
+                    let a = document.getElementById("number-a").value;
+                    let b = document.getElementById("number-b").value;
+                    if(b != 0) {
+                        result = a / b;
+                    }
+                document.getElementById("demo").innerHTML=result;
+                }
+            </script>
+
         </main>
         <hr>
         <div data-include="components/footer.html"></div>

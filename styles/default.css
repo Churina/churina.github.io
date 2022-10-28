@@ -149,17 +149,19 @@ footer p a
 .background
 {
     background-color: rgb(241, 241, 193);
+    margin:10px auto;
     width: 33%;
+    
 }
 
-.summary
+.tableborder
 {
     background-color:rgb(241, 241, 193);
     border:2px solid rgb(10, 11, 1);
     border-collapse: collapse;
     font-family:Arial, Helvetica, sans-serif;
     font-weight:bold;
-    margin:10px;
+    margin:10px auto;
     width: 33%;
 }
 

@@ -10,11 +10,95 @@
         <div data-include="components/header.html"></div>
         <hr>
         <main>
-                <h2>Template</h2>
-                <h4>This is the page I'm going to use for future reference!</h4>
+                <h2>CP-CO Alpha1</h2>
+                <table class="tableborder">
+                    <tr>
+                        <th>customer_id</th>
+                        <th>last_name</th>
+                        <th>first_name</th>
+                        <th>last_purchase_quantity</th>
+                        <th>Last_purchase_amount</th>
+                    </tr>
+                    <tr>
+                        <td>001</td>
+                        <td>Smith</td>
+                        <td>Jacob</td>
+                        <td>5</td>
+                        <td>$50</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Johnson</td>
+                        <td>Iris</td>
+                        <td>10</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Perez</td>
+                        <td>Javier</td>
+                        <td>5</td>
+                        <td>$50</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Thomas</td>
+                        <td>Henry</td>
+                        <td>20</td>
+                        <td>$200</td>
+                    </tr>
+                    <tr>
+                        <td>005</td>
+                        <td>Smith</td>
+                        <td>Janice</td>
+                        <td>10</td>
+                        <td>$100</td>
+                    </tr>
+                </table>
         </main>
         <hr>
         <div data-include="components/footer.html"></div>
         <script src="scripts/HTMLInclude.min.js"></script>
+        <script>
+            const customer1 = {
+                customer_id:001,
+                last_name:Smith,
+                first_name:Jacob,
+                last_purchase_quantity:5,
+                Last_purchase_amount:$50
+            }
+            const customer2 = {
+                customer_id:002,
+                last_name:Johnson,
+                first_name:Iris,
+                last_purchase_quantity:10,
+                Last_purchase_amount:$100
+            }
+            const customer3 = {
+                customer_id:003,
+                last_name:Perez,
+                first_name:Javier,
+                last_purchase_quantity:5,
+                Last_purchase_amount:$50
+            }
+            const customer4 = {
+                customer_id:004,
+                last_name:Thomas,
+                first_name:Henry,
+                last_purchase_quantity:20,
+                Last_purchase_amount:$200
+            }
+            const customer5 = {
+                customer_id:005,
+                last_name:Smith,
+                first_name:Janice,
+                last_purchase_quantity:10,
+                Last_purchase_amount:$100
+            }
+            let customer = "";
+            function check(id){
+                console.log()
+            }
+        </script>
     </body>
 </html>

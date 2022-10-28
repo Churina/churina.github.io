@@ -96,6 +96,8 @@ let isApplicant1Eligible = (applicant1.age >= 18);
 function isEligibleApplicant(applicant) {
     return applicant.age >= 18;
 }
+//let isApplicant1Eligible = applicant1.age >= 18? true : false;
+
 //11.   Replace the placeholder string  with an expression that returns true if
 //      applicant1's programStatus is "Active".
 let isApplicant1Active = (applicant1.programStatus == 'Active');
@@ -132,6 +134,17 @@ const copyArray = (array) => {
     }
     return arrayCopy;
 }
+/*
+const copyArray = (array) => {
+    const arrayCopy = [];
+    for (const item of array) {
+        arrayCopy.push(item)//TODO: push the current item into the array.
+    }
+    return arrayCopy;
+}
+copyArray([1,2,3,4,5])
+*/
+
 /*
 NOTE:
 A for/of loop syntax might be new to you. The above loop does the same thing as this one:
@@ -188,12 +201,24 @@ Push an object to an array
 //      Remember that you already wrote logic to determine if a single applicant
 //      is eligible in the isEligibleApplicant function.
 const filterApplicantsByEligibility = (applicants) => {
-    return applicant.age >= 18; //TODO: fill in the correct logic for this function
+    let eligibleApplicant =[];
+    for (const applicant of applicants){
+        if (applicant.age >= 18) {
+            eligibleApplicant.push(applicant);
+        }
+    }
+    return eligibleApplicant; //TODO: fill in the correct logic for this function
 }
 
 //18.   Given an array of applicants, return an array of active students. Remember
 //      that you already wrote the logic for a single applicant in the 
 //      isActiveApplicant function.
 const filterApplicantsByProgramStatus = (applicants) => {
-    return []; //TODO: fill in the correct logic for this function
+    let activeStudents = [];
+    for (applicant of applicants){
+        if (applicant.programStatus =='Active'){
+            activeStudents.push(applicant);
+        }
+    }
+    return activeStudents; //TODO: fill in the correct logic for this function
 }

@@ -3,105 +3,129 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CP-CO Alpha1</title>
+        <title>Js-activity-1</title>
         <link href="../styles/default.css" rel="stylesheet">
     </head>    
     <body>
         <div data-include="../components/assignment_header.html"></div>
         <hr>
         <main>
-                <h2>CP-CO Alpha1</h2>
+                <h2>Js-activity-1</h2>
                 <table class="tableborder">
                     <tr>
-                        <th>customer_id</th>
-                        <th>last_name</th>
-                        <th>first_name</th>
-                        <th>last_purchase_quantity</th>
-                        <th>Last_purchase_amount</th>
+                        <th>Customer Id</th>
+                        <th>Last Name</th>
+                        <th>First Name</th>
+                        <th>Last Purchase Quantity</th>
+                        <th>Last Purchase Amount In Dollars</th>
                     </tr>
                     <tr>
                         <td>001</td>
                         <td>Smith</td>
                         <td>Jacob</td>
                         <td>5</td>
-                        <td>$50</td>
+                        <td>50</td>
                     </tr>
                     <tr>
                         <td>002</td>
                         <td>Johnson</td>
                         <td>Iris</td>
                         <td>10</td>
-                        <td>$100</td>
+                        <td>100</td>
                     </tr>
                     <tr>
                         <td>003</td>
                         <td>Perez</td>
                         <td>Javier</td>
                         <td>5</td>
-                        <td>$50</td>
+                        <td>50</td>
                     </tr>
                     <tr>
                         <td>004</td>
                         <td>Thomas</td>
                         <td>Henry</td>
                         <td>20</td>
-                        <td>$200</td>
+                        <td>200</td>
                     </tr>
                     <tr>
                         <td>005</td>
                         <td>Smith</td>
                         <td>Janice</td>
                         <td>10</td>
-                        <td>$100</td>
+                        <td>100</td>
                     </tr>
                 </table>
+                <h4>Get Customer information</h4>
+                <div class="customer">
+                    <input type="text" placeholder="Enter customer ID" id="customer_id">
+                    <button onclick ="getCustomerInformation()">click me to get customer information</button>
+                    <p id = "results">The results will go here. </p>
+                </div>
+                
+                <script>
+                    const customers = 
+                    [
+                    {
+                        customer_id:001,
+                        last_name:"Smith",
+                        first_name:"Jacob",
+                        last_purchase_quantity:5,
+                        Last_purchase_amount_in_dollars:50,
+                    },
+                    {
+                        customer_id:002,
+                        last_name:"Johnson",
+                        first_name:"Iris",
+                        last_purchase_quantity:10,
+                        Last_purchase_amount_in_dollars:100,
+                    },
+                    {
+                        customer_id:003,
+                        last_name:"Perez",
+                        first_name:"Javier",
+                        last_purchase_quantity:5,
+                        Last_purchase_amount_in_dollars:50,
+                    },
+                    {
+                        customer_id:004,
+                        last_name:"Thomas",
+                        first_name:"Henry",
+                        last_purchase_quantity:20,
+                        Last_purchase_amount_in_dollars:200,
+                    },
+                    {
+                        customer_id:005,
+                        last_name:"Smith",
+                        first_name:"Janice",
+                        last_purchase_quantity:10,
+                        Last_purchase_amount_in_dollars:100,
+                    },
+                    ];
+        
+                    function getCustomerInformation()
+                    {
+                        const customerInput = document.getElementById("customer_id").value;
+                        for (const thisCustomer of customers)
+                        {
+                            if (customerInput >0 && customerInput <6)
+                            {
+                                if (customerInput == thisCustomer.customer_id)  
+                            {
+                                document.getElementById("results").innerHTML = " customer ID: " + thisCustomer.customer_id + "." 
+                                + " Name: " + thisCustomer.first_name + " " + thisCustomer.last_name + "." 
+                                + " Last purchase quantity: " + thisCustomer.last_purchase_quantity + "." 
+                                + " Last purchase amount: " + thisCustomer.Last_purchase_amount_in_dollars + " dollars." ;
+                            }
+                            } else {
+                                document.getElementById("results").innerHTML = `This customer id doesn't exist. Enter a valid customer ID.`
+                            }
+                            
+                        }
+                    }
+                </script>        
         </main>
         <hr>
         <div data-include="../components/assignment_footer.html"></div>
         <script src="../scripts/HTMLInclude.min.js"></script>
-        <script>
-            const customer = [
-            const customer1 = {
-                customer_id:001,
-                last_name:Smith,
-                first_name:Jacob,
-                last_purchase_quantity:5,
-                Last_purchase_amount:$50
-            }
-            const customer2 = {
-                customer_id:002,
-                last_name:Johnson,
-                first_name:Iris,
-                last_purchase_quantity:10,
-                Last_purchase_amount:$100
-            }
-            const customer3 = {
-                customer_id:003,
-                last_name:Perez,
-                first_name:Javier,
-                last_purchase_quantity:5,
-                Last_purchase_amount:$50
-            }
-            const customer4 = {
-                customer_id:004,
-                last_name:Thomas,
-                first_name:Henry,
-                last_purchase_quantity:20,
-                Last_purchase_amount:$200
-            }
-            const customer5 = {
-                customer_id:005,
-                last_name:Smith,
-                first_name:Janice,
-                last_purchase_quantity:10,
-                Last_purchase_amount:$100
-            }
-            ]
-            let customer = "";
-            function check(id){
-                console.log()
-            }
-           
-        </script>
     </body>
 </html>

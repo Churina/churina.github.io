@@ -10,38 +10,45 @@
         <div data-include="../components/assignment_header.html"></div>
         <hr>
         <main>
-            <div>
+            <h2>General exercises</h2>
+            <div class="kelvin-to-fahrenheit">
                 <h4>Kelvin to Fahrenheit Converter</h4>
-                Kelvin: <input type="number" id="kelvin" placeholder="Enter the Kelvin Temperature">
-                <button onclick="kelvinToFahrenheit()">Try it</button>
-                The result is :<label id="kelvinToFahrenheit"></label>   
-            </div>
-            <div>
-                <h4>Fahrenheit to Celcius Converter</h4>
-                Fahrenheit: <input type="number" id="Fahrenheit" placeholder="Enter the Fahrenheit Temperature">
-                <button onclick="fahrenheitToCelcius()">Try it</button>
-                The result is :<label id="fahrenheitToCelcius"></label>   
+                <input type="number" id="kelvin" placeholder="Enter the Kelvin Temperature">
+                <button onclick="kelvinToFahrenheit()">Convert to Fahrenheit</button>
+                <p id="kelvinToFahrenheit"></p>   
             </div>
             <script>
-                function kelvinToFahrenheit() {
+                function kelvinToFahrenheit()
+                {
                 let temperatureInKelvin= document.getElementById("kelvin").value;
                 temperatureInFahrenheit = (temperatureInKelvin - 273.15)*9/5 + 32;
-                document.getElementById("kelvinToFahrenheit").innerHTML = parseInt(temperatureInFahrenheit);
-                    }
-
-                function fahrenheitToCelcius() {
-                let temperatureInFahrenheit= document.getElementById("Fahrenheit").value;
-                temperatureInCelcius = (5/9) *(temperatureInFahrenheit - 32);
-                document.getElementById("fahrenheitToCelcius").innerHTML = parseInt(temperatureInCelcius);
-                    }
+                document.getElementById("kelvinToFahrenheit").innerHTML ="You entered " + temperatureInKelvin + " Kelvin, which is " + parseInt(temperatureInFahrenheit) + " Fahrenheit.";
+                }
             </script>
 
 
-            <h4>Divider</h4>
-            <input type="number" id="number-a" placeholder="Enter the number">
-            <input type="number" id="number-b" placeholder="Enter the number">
-            <button onclick="divider()">click Me</button> The result is:<p id="demo"></p>
-            <p id="demo"></p>
+            <div class="fahrenheit-to-celsius">
+                <h4>Fahrenheit to Celsius Converter</h4>
+                <input type="number" id="Fahrenheit" placeholder="Enter the Fahrenheit Temperature">
+                <button onclick="fahrenheitToCelsius()">Convert to Celsius</button>
+                <p id="fahrenheitToCelsius"></p>   
+            </div>
+            <script>
+                function fahrenheitToCelsius()
+                {
+                let temperatureInFahrenheit= document.getElementById("Fahrenheit").value;
+                temperatureInCelsius = (5/9) *(temperatureInFahrenheit - 32);
+                document.getElementById("fahrenheitToCelsius").innerHTML ="You entered " + temperatureInFahrenheit + " Fahrenheit, which is " + parseInt(temperatureInCelsius)+ " Celsius.";;
+                }
+            </script>
+
+            <div class="divider">
+                <h4>Divider</h4>
+                <input type="number" id="number-a" placeholder="Enter the number">/
+                <input type="number" id="number-b" placeholder="Enter the number">
+                <button onclick="divider()">Devide</button> 
+                <p id="divider-result"></p>
+                </div>
             <script>        
                 function divider(){
                     let a = document.getElementById("number-a").value;
@@ -49,9 +56,12 @@
                     if(b != 0) {
                         result = a / b;
                     }
-                document.getElementById("demo").innerHTML=result;
+                document.getElementById("divider-result").innerHTML=a + " divide " + b + " is " + result + ".";
                 }
             </script>
+
+
+
 
 <!--
             <h4>Gas it up</h4>

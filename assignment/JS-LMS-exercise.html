@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS LMS exercise</title>
+        <link href="styles/default.css" rel="stylesheet">
+    </head>    
+    <body>
+        <div data-include="components/header.html"></div>
+        <hr>
+        <main>
+                <h2>JS LMS exercise</h2>
+                <input type="text" placeholder="Enter date" id="data_input">
+                <button onclick="filterByDate()">CLick me to get student information</button>
+                <p id="filter_by_data">Result goes here!</p>
+        </main>
+        <script>
+            const testData = [
+            {
+                quizName: "History 1",
+                quizModule: "History",
+                quizScore: 70,
+                studentId: 1,
+                studentName: "Bob Ross",
+                submissionDate: "12/20/2020"
+            },
+            {
+                quizName: "History 1",
+                quizModule: "History",
+                quizScore: 77,
+                studentId: 16,
+                studentName: "Diana Ross",
+                submissionDate: "12/20/2020"
+            },
+            {
+                quizName: "History 1",
+                quizModule: "History",
+                quizScore: 82,
+                studentId: 15,
+                studentName: "Steve Smith",
+                submissionDate: "12/20/2020"
+            },
+            {
+                quizName: "History 1",
+                quizModule: "History",
+                quizScore: 88,
+                studentId: 14,
+                studentName: "Dylan Roberts",
+                submissionDate: "12/20/2020"
+            },
+            {
+                quizName: "History 2",
+                quizModule: "History",
+                quizScore: 82,
+                studentId: 1,
+                studentName: "Bob Ross",
+                submissionDate: "1/20/2021"
+            },
+            {
+                quizName: "History 2",
+                quizModule: "History",
+                quizScore: 89,
+                studentId: 16,
+                studentName: "Diana Ross",
+                submissionDate: "1/20/2021"
+            },
+
+            {
+                quizName: "History 2",
+                quizModule: "History",
+                quizScore: 73,
+                studentId: 15,
+                studentName: "Steve Smith",
+                submissionDate: "1/20/2021"
+            },
+
+            {
+                quizName: "History 2",
+                quizModule: "History",
+                quizScore: 85,
+                studentId: 15,
+                studentName: "Steve Smith",
+                submissionDate: "1/20/2021"
+            },
+            {
+                quizName: "Reading Comprehension",
+                quizModule: "English",
+                quizScore: 60,
+                studentId: 15,
+                studentName: "Steve Smith",
+                submissionDate: "2/20/2020"
+            },
+            {
+                quizName: "Reading Comprehension",
+                quizModule: "English",
+                quizScore: 83,
+                studentId: 16,
+                studentName: "Diana Ross",
+                submissionDate: "2/20/2020"
+            },
+            {
+                quizName: "Reading Comprehension",
+                quizModule: "English",
+                quizScore: 70,
+                studentId: 14,
+                studentName: "Dylan Roberts",
+                submissionDate: "2/20/2020"
+            }
+            ];
+
+//Filter By Date Feature (filterByDate)
+//1. Given I have an array of submission objects, when I call the filterByDate function
+//with a date and the array of submissions (in that order), then an array of
+//submission objects with a submissionDate equal to that date are returned to me,
+//so I can see all submissions for a particular date.
+//2. Given I have supplied a date and an array of submission objects (in that order),
+//when the array is empty, or the filter by date feature does not find any results,
+//then I am returned an empty array.
+            
+            const dataInput=document.getElementById("data_input").value;
+            const filterByDate = () => {
+                for (const testDataByDate of testData) {
+                    if ()
+                }
+            }
+
+
+
+
+
+        </script>
+        <hr>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
+    </body>
+</html>

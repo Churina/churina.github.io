@@ -39,5 +39,5 @@ const onAddToDo = (event) => {
     const liText= document.createTextNode(text);
     newListItem.appendChild(liText);
     document.querySelector('ul').appendChild(newListItem);
-    }
-    document.querySelector('button').addEventListener('click', onAddToDo)
+}
+document.querySelector('button').addEventListener('click', onAddToDo)

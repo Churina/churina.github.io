@@ -21,21 +21,21 @@
                 <section>
                     <h4>Filter By Student Id</h4>
                     <input type="text" placeholder="Enter student Id" id="studentId_input">
-                    <button onclick="filterByStudentId()">Filter By Student Id</button>
+                    <button>Filter By Student Id</button>
                     <p id="filter_by_data">Result goes here!</p> 
                 </section>
                 <hr>
                 <section>
                     <h4>Find unsubmitted students</h4>
                     <input type="text" placeholder="Enter date" id="unsubmitted">
-                    <button onclick="findUnsubmitted">Find Unsubmitted</button>
+                    <button>Find Unsubmitted</button>
                     <p id="filter_by_data">Result goes here!</p> 
                 </section>
                 <hr>
                 <section>
                     <h4>Get Average Quiz Score</h4>
                     <input type="text" placeholder="Enter quiz scores" id="score_input">
-                    <button onclick="getAverageScore()">Get Average Quiz Score</button>
+                    <button>Get Average Quiz Score</button>
                     <p id="filter_by_data">Result goes here!</p> 
                 </section>
 
@@ -151,10 +151,10 @@
                       document.getElementById("filter_by_data").innerHTML = 
                       `Quiz name is: ${thisTestData.quizName}.<br>
                        Quiz module is: ${thisTestData.quizModule}.<br>
-                        Quiz score is: ${thisTestData.quizScore}.<br>
-                        Quiz student ID is: ${thisTestData.studentId}.<br>
-                        Quiz student name is: ${thisTestData.studentName}.<br>
-                        Submission date is: ${thisTestData.submissionDate}.`
+                       Quiz score is: ${thisTestData.quizScore}.<br>
+                       Quiz student ID is: ${thisTestData.studentId}.<br>
+                       Quiz student name is: ${thisTestData.studentName}.<br>
+                       Submission date is: ${thisTestData.submissionDate}.`
                     } else {
                         document.getElementById("filter_by_data").innerHTML = 'Sorrry, doesn\'t find any result.';
                     }
@@ -163,6 +163,12 @@
             document.querySelector('button').addEventListener('click',filterByDate);
 
 
+
+
+
+           // filterByStudentId()
+           // findUnsubmitted()
+           // getAverageQuizScore()
 
         </script>
         <hr>

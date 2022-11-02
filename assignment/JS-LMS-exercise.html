@@ -11,9 +11,31 @@
         <hr>
         <main>
                 <h2>JS LMS exercise</h2>
-                <input type="text" placeholder="Enter date" id="data_input">
-                <button onclick="filterByDate()">CLick me to get student information</button>
-                <p id="filter_by_data">Result goes here!</p>
+                <section>
+                    <input type="text" placeholder="Enter date" id="data_input">
+                    <button onclick="filterByDate()">Filter By Date</button>
+                    <p id="filter_by_data">Result goes here!</p> 
+                </section>
+                <hr>
+                <section>
+                    <input type="text" placeholder="Enter student Id" id="studentId_input">
+                    <button onclick="filterByStudentId()">Filter By Student Id</button>
+                    <p id="filter_by_data">Result goes here!</p> 
+                </section>
+                <hr>
+                <section>
+                    <input type="text" placeholder="Enter date" id="unsubmitted">
+                    <button onclick="findUnsubmitted()">Find Unsubmitted</button>
+                    <p id="filter_by_data">Result goes here!</p> 
+                </section>
+                <hr>
+                <section>
+                    <input type="text" placeholder="Enter scores" id="score_input">
+                    <button onclick="getAverageScore()">Get Average Score</button>
+                    <p id="filter_by_data">Result goes here!</p> 
+                </section>
+
+               
         </main>
         <script>
             const testData = [

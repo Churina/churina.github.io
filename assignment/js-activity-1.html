@@ -17,7 +17,7 @@
                         <th>Last Name</th>
                         <th>First Name</th>
                         <th>Last Purchase Quantity</th>
-                        <th>Last Purchase Amount In Dollars</th>
+                        <th>Last Purchase Amount</th>
                     </tr>
                     <tr>
                         <td>001</td>
@@ -58,7 +58,7 @@
                 <h4>Get Customer information</h4>
                 <div class="customer">
                     <input type="text" placeholder="Enter customer ID" id="customer_id">
-                    <button onclick ="getCustomerInformation()">Get customer information</button>
+                    <button onclick ="getCustomerInformation()">Get Customer Information</button>
                     <p id = "results">The results will go here. </p>
                 </div>
                 
@@ -111,10 +111,10 @@
                         {
                             if (customerInput == thisCustomer.customer_id)  
                             {
-                                document.getElementById("results").innerHTML  = " <ul><li>Customer ID: " + thisCustomer.customer_id + 
-                                    ".</li><li>Name: " + thisCustomer.first_name + " " + thisCustomer.last_name +
-                                    ".</li><li>Last purchase quantity: " + thisCustomer.last_purchase_quantity +
-                                    ".</li><li>Last purchase amount: $" + thisCustomer.Last_purchase_amount_in_dollars + ".</li></ul>" ;
+                                document.getElementById("results").innerHTML  = " Customer ID: " + thisCustomer.customer_id + 
+                                    ".<br>Name: " + thisCustomer.first_name + " " + thisCustomer.last_name +
+                                    ".<br>Last purchase quantity: " + thisCustomer.last_purchase_quantity +
+                                    ".<br>Last purchase amount: $" + thisCustomer.Last_purchase_amount_in_dollars + "." ;
                                 foundCustomer = true;  
                             } 
                         } 

@@ -105,20 +105,22 @@
                     function getCustomerInformation()
                     {
                         const customerInput = document.getElementById("customer_id").value;
+                        let foundCustomer = false;
+                        
                         for (const thisCustomer of customers)
                         {
                             if (customerInput == thisCustomer.customer_id)  
                             {
-                                document.getElementById("results").textContent = " <ul><li>Customer ID: " + thisCustomer.customer_id + 
+                                document.getElementById("results").innerHTML  = " <ul><li>Customer ID: " + thisCustomer.customer_id + 
                                     ".</li><li>Name: " + thisCustomer.first_name + " " + thisCustomer.last_name +
                                     ".</li><li>Last purchase quantity: " + thisCustomer.last_purchase_quantity +
                                     ".</li><li>Last purchase amount: $" + thisCustomer.Last_purchase_amount_in_dollars + ".</li></ul>" ;
-                                return;
-                            }
-                            else 
-                            {
-                                document.getElementById("results").textContent = `This customer id doesn't exist. Enter a valid customer ID.`
-                            }  
+                                foundCustomer = true;  
+                            } 
+                        } 
+                        
+                        if (!foundCustomer){
+                            document.getElementById("results").innerHTML = `This customer id doesn't exist. Enter a valid customer ID.`
                         }
                     }
                 </script>        

@@ -144,22 +144,28 @@
 //when the array is empty, or the filter by date feature does not find any results,
 //then I am returned an empty array.
             
-            const dataInput=document.getElementById("submission_date_input").value;
+           
             const filterByDate = () => {
+                const dataInput=document.getElementById("submission_date_input").value;
+                document.getElementById("filter_by_data").innerHTML = "";
+                let newArray = [];
                 for (const thisTestData of testData) {
                     if (dataInput == thisTestData.submissionDate) {
-                      document.getElementById("filter_by_data").textContent = 
+                        newArray.push(thisTestData);
+                      document.getElementById("filter_by_data").innerHTML+= 
                       `Quiz name is: ${thisTestData.quizName}.<br>
                        Quiz module is: ${thisTestData.quizModule}.<br>
                        Quiz score is: ${thisTestData.quizScore}.<br>
                        Quiz student ID is: ${thisTestData.studentId}.<br>
                        Quiz student name is: ${thisTestData.studentName}.<br>
                        Submission date is: ${thisTestData.submissionDate}.`
-                       return;
-                    } else {
-                        document.getElementById("filter_by_data").textContent = 'Sorrry, doesn\'t find any result.';
-                    }
+                       
+                    } 
                 }
+                if (newArray.length === 0) {
+                    document.getElementById("filter_by_data").innerHTML = 'Sorrry, doesn\'t find any result.';
+                }
+                console.log(newArray);
             }
             document.querySelector('button').addEventListener('click',filterByDate);
 

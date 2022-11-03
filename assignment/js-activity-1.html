@@ -107,19 +107,17 @@
                         const customerInput = document.getElementById("customer_id").value;
                         for (const thisCustomer of customers)
                         {
-                            if (customerInput >0 && customerInput <6)
-                            {
-                                if (customerInput == thisCustomer.customer_id)  
+                            if (customerInput == thisCustomer.customer_id)  
                             {
                                 document.getElementById("results").innerHTML = " <ul><li>Customer ID: " + thisCustomer.customer_id + ".</li>" 
                                 + " <li>Name: " + thisCustomer.first_name + " " + thisCustomer.last_name + ".</li>" 
                                 + " <li>Last purchase quantity: " + thisCustomer.last_purchase_quantity + ".</li>" 
                                 + " <li>Last purchase amount: " + thisCustomer.Last_purchase_amount_in_dollars + " dollars.</li></ul>" ;
                             }
-                            } else {
+                            else 
+                            {
                                 document.getElementById("results").innerHTML = `This customer id doesn't exist. Enter a valid customer ID.`
                             }
-                            
                         }
                     }
                 </script>        

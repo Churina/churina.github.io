@@ -13,7 +13,7 @@
                 <h2>JS LMS exercise</h2>
                 <section>
                     <h4>Filter By Date</h4>
-                    <input type="text" placeholder="mm/dd/yy" id="data_input">
+                    <input type="text" placeholder="mm/dd/yy" id="submission_date_input">
                     <button>Filter By Date</button>
                     <p id="filter_by_data">Result goes here!</p> 
                 </section>
@@ -144,19 +144,20 @@
 //when the array is empty, or the filter by date feature does not find any results,
 //then I am returned an empty array.
             
-            const dataInput=document.getElementById("data_input").value;
+            const dataInput=document.getElementById("submission_date_input").value;
             const filterByDate = () => {
                 for (const thisTestData of testData) {
                     if (dataInput == thisTestData.submissionDate) {
-                      document.getElementById("filter_by_data").innerHTML = 
+                      document.getElementById("filter_by_data").textContent = 
                       `Quiz name is: ${thisTestData.quizName}.<br>
                        Quiz module is: ${thisTestData.quizModule}.<br>
                        Quiz score is: ${thisTestData.quizScore}.<br>
                        Quiz student ID is: ${thisTestData.studentId}.<br>
                        Quiz student name is: ${thisTestData.studentName}.<br>
                        Submission date is: ${thisTestData.submissionDate}.`
+                       return;
                     } else {
-                        document.getElementById("filter_by_data").innerHTML = 'Sorrry, doesn\'t find any result.';
+                        document.getElementById("filter_by_data").textContent = 'Sorrry, doesn\'t find any result.';
                     }
                 }
             }

@@ -171,6 +171,11 @@ const UnsubmittedStudents = () =>
         }
     }
     document.getElementById("find_unsubmitted").innerHTML = `Students without submission on date ${date} is: ${allstudentNames}.`
+    
+    if(allstudentNames.length == 0)
+    {
+        document.getElementById("find_unsubmitted").innerHTML =`All students have submitted their quizzes.`
+    }
 }
 document.querySelector('.unsubmitted_button').addEventListener('click',UnsubmittedStudents);
 

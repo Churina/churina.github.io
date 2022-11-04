@@ -149,8 +149,63 @@ document.querySelector('.id_button').addEventListener('click',filterByStudentId)
 
 
 //Find unsubmitted students
-//findUnsubmitted()
+const UnsubmittedStudents = () =>
+{
+    const date = document.getElementById("unsubmitted_date_input").value;
+    document.getElementById("find_unsubmitted").innerHTML = "";
+    const allstudentNames = [];
+    for(const thisTestData of testData)
+    {
+        if(!allstudentNames.includes(thisTestData.studentName))
+        {
+            allstudentNames.push(thisTestData.studentName)
+        }
+    }
 
+    for(const thisTestData of testData)
+    {
+        if(date == thisTestData.submissionDate)
+        {
+            const currentStudentsIndex = allstudentNames.indexOf(thisTestData.studentName); 
+            allstudentNames.splice(currentStudentsIndex,1);    
+        }
+    }
+    document.getElementById("find_unsubmitted").innerHTML = `Students without submission on date ${date} is: ${allstudentNames}.`
+}
+document.querySelector('.unsubmitted_button').addEventListener('click',UnsubmittedStudents);
+
+
+/* 
+The logic of above code is: 
+totalStudents = 4;//hard coded
+const getListOfStudents = (testData) => 
+{
+    const allstudentNames = [];//find and remove duplicates
+    for(const thisTestData of testData)
+    {
+        if(!allstudentNames.includes(thisTestData.studentName))//Not already there
+        {
+            allstudentNames.push(thisTestData.studentName)//write it down
+        }
+    }
+}
+
+const UnsubmittedStudents = (allstudentNames) =>
+{
+    const date = document.getElementById("unsubmitted_date_input").value;//get data from input field
+    const unsubmittedStudents = [...allstudentNames];//will remove those who have submitted from the list
+    for(const thisTest of testData)//go through list
+    {
+        if(date == thisTest.submissionDate)//There is a Test, and we can remove
+        {
+            const currentStudentsIndex = unsubmittedStudents.indexOf(thisTest.studentName); 
+            unsubmittedStudents.splice(currentStudentsIndex,1);//remove it
+            document.getElementById("find_unsubmitted").innerHTML = `Students without submission on date ${date} is: ${unsubmittedStudents}.`
+        }
+    }
+}
+document.querySelector('.unsubmitted_button').addEventListener('click',UnsubmittedStudents);
+*/
 
 
 

@@ -91,37 +91,68 @@ const testData = [
     }
     ];
     
-   
-    const filterByDate = () => 
+
+ //  Filter By Date
+const filterByDate = () => 
+{
+    const dataInput = document.getElementById("submission_date_input").value;
+    document.getElementById("filter_by_data").innerHTML = "";
+    let newArray = [];
+    for (const thisTestData of testData) 
     {
-        const dataInput=document.getElementById("submission_date_input").value;
-        document.getElementById("filter_by_data").innerHTML = "";
-        let newArray = [];
-        for (const thisTestData of testData) 
+        if (dataInput == thisTestData.submissionDate) 
         {
-            if (dataInput == thisTestData.submissionDate) 
-            {
-               newArray.push(thisTestData);
-               document.getElementById("filter_by_data").innerHTML+= 
-              `Quiz name is: ${thisTestData.quizName}.<br>
-               Quiz module is: ${thisTestData.quizModule}.<br>
-               Quiz score is: ${thisTestData.quizScore}.<br>
-               Quiz student ID is: ${thisTestData.studentId}.<br>
-               Quiz student name is: ${thisTestData.studentName}.<br>
-               Submission date is: ${thisTestData.submissionDate}.<hr>`  
-            } 
-        }
-        if (newArray.length === 0) 
+            newArray.push(thisTestData);
+            document.getElementById("filter_by_data").innerHTML += 
+            `Quiz name: ${thisTestData.quizName}.<br>
+            Quiz module: ${thisTestData.quizModule}.<br>
+            Quiz score: ${thisTestData.quizScore}.<br>
+            Quiz student ID: ${thisTestData.studentId}.<br>
+            Quiz student name: ${thisTestData.studentName}.<br>
+            Submission date: ${thisTestData.submissionDate}.<hr>`  
+        } 
+    }
+    if (newArray.length === 0) 
+    {
+        document.getElementById("filter_by_data").innerHTML = 'Sorrry, doesn\'t find any result.';
+    }
+}
+document.querySelector('.date_button').addEventListener('click',filterByDate);
+
+
+//Filter By Student Id
+const filterByStudentId = () => 
+{
+    const dataInput = document.getElementById("studentId_input").value;
+    document.getElementById("filter_by_student_id").innerHTML = "";
+    let newArray = [];
+    for (const thisTestData of testData)
+    {
+        if (dataInput == thisTestData.studentId)
         {
-            document.getElementById("filter_by_data").innerHTML = 'Sorrry, doesn\'t find any result.';
+            newArray.push(thisTestData);
+            document.getElementById("filter_by_student_id").innerHTML +=
+            `Quiz name: ${thisTestData.quizName}.<br>
+            Quiz module: ${thisTestData.quizModule}.<br>
+            Quiz score: ${thisTestData.quizScore}.<br>
+            Quiz student ID: ${thisTestData.studentId}.<br>
+            Quiz student name: ${thisTestData.studentName}.<br>
+            Submission date: ${thisTestData.submissionDate}.<hr>`  
         }
     }
-    document.querySelector('button').addEventListener('click',filterByDate);
+    if (newArray.length === 0)
+    {
+        document.getElementById("filter_by_student_id").innerHTML = 'ID not found.';
+    }
+}
+document.querySelector('.id_button').addEventListener('click',filterByStudentId);
+
+
+//Find unsubmitted students
+findUnsubmitted()
 
 
 
 
 
-   // filterByStudentId()
-   // findUnsubmitted()
    // getAverageQuizScore()

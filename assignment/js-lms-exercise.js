@@ -149,10 +149,20 @@ document.querySelector('.id_button').addEventListener('click',filterByStudentId)
 
 
 //Find unsubmitted students
-findUnsubmitted()
+//findUnsubmitted()
 
 
 
 
-
-   // getAverageQuizScore()
+//Get average score
+const getAverageQuizScore = () =>
+{
+    document.getElementById("average_score").innerHTML = "";
+    const scoresArray = [];
+    for (const thisTestData of testData)
+    {
+        scoresArray.push(thisTestData.quizScore);
+    }
+document.getElementById("average_score").innerHTML = (scoresArray.reduce((a,b) => a + b)/scoresArray.length).toFixed(1);
+}                                                 
+document.querySelector('.average_score_button').addEventListener('click',getAverageQuizScore);

@@ -3,10 +3,16 @@ body
     background-color:lightblue;
 }
 
+h2
+{
+    font-size: 30px;
+    color: darkgoldenrod;
+    text-align: center;
+}
 .container
 {
     background-color: azure;
-    margin:50px auto;
+    margin:20px auto;
     max-width: 300px;
 }
 
@@ -54,4 +60,9 @@ body
 {
     background-color:#999;
     color: white;
+}
+
+.input-calculator
+{
+    text-align: center;
 }

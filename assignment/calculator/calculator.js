@@ -40,17 +40,17 @@ buttons_2.map(button =>
             switch(e.target.id)
             {
                 case 'add':
-                    output.textContent = num_1 + num_2;
+                    output.textContent = `${num_1}+${num_2}=${num_1 + num_2}`;
                     break;
                 case 'subtract':
-                    output.textContent = num_1 - num_2;
+                    output.textContent = `${num_1}-${num_2}=${num_1 - num_2}`;
                     break;
                 case 'multiply':
-                    output.textContent = num_1 * num_2;
+                    output.textContent = `${num_1}*${num_2}=${num_1 * num_2}`;
                     break;
                 case 'divide':
                     if(num_2 != 0){
-                       output.textContent = num_1 / num_2;
+                       output.textContent = `${num_1}/${num_2}=${num_1 / num_2}`;
                     break; 
                     } else {
                        output.textContent ='Error: cannot divide by zero';

@@ -55,7 +55,12 @@ buttons_2.map(button =>
                     } else {
                        output.textContent ='Error: cannot divide by zero';
                     }
-                    
+                case 'power' :
+                       output.textContent = num_1 ** num_2;
+                    break;
+                case 'square_root':
+                       output.textContent = Math. sqrt(num_1);
+                       break;
             }
         })
     }

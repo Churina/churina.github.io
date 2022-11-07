@@ -152,8 +152,9 @@ document.querySelector('.id_button').addEventListener('click',filterByStudentId)
 const UnsubmittedStudents = () =>
 {
     const date = document.getElementById("unsubmitted_date_input").value;
-    document.getElementById("find_unsubmitted").innerHTML = "";
     const allStudentNames = [];
+    const submittedStudents = [];
+    document.getElementById("find_unsubmitted").innerHTML = "";
     for(const thisTestData of testData)
     {
         if(!allStudentNames.includes(thisTestData.studentName))
@@ -161,19 +162,21 @@ const UnsubmittedStudents = () =>
             allStudentNames.push(thisTestData.studentName)
         }
     }
-
-    const unsubmittedStudents = [...allStudentNames]
     for(const thisTestData of testData)
     {
         if(date == thisTestData.submissionDate)
         {
-            const currentStudentsIndex = unsubmittedStudents.indexOf(thisTestData.studentName); 
-            unsubmittedStudents.splice(currentStudentsIndex,1); 
+            if (!submittedStudents.includes(thisTestData.studentName))
+            {
+                const currentStudentsIndex = allStudentNames.indexOf(thisTestData.studentName); 
+                allStudentNames.splice(currentStudentsIndex,1); 
+                submittedStudents.push(thisTestData.studentName);
+            } 
         }
     }
-    document.getElementById("find_unsubmitted").innerHTML = `Students without submission on date ${date} is: ${unsubmittedStudents}.`
+    document.getElementById("find_unsubmitted").innerHTML = `Students without submission on date ${date} is: ${allStudentNames}.`
     
-    if(unsubmittedStudents.length == 0)
+    if(allStudentNames.length == 0)
     {
         document.getElementById("find_unsubmitted").innerHTML =`All students have submitted their quizzes.`
     }
@@ -195,7 +198,6 @@ const getListOfStudents = (testData) =>
         }
     }
 }
-
 const UnsubmittedStudents = (allStudentNames) =>
 {
     const date = document.getElementById("unsubmitted_date_input").value;//get data from input field

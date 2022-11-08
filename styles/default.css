@@ -146,9 +146,9 @@ footer p a
     text-decoration: none;
 }
 
-.background
+.color_list
 {
-    background-color: rgb(241, 241, 193);
+    background-color: #AFC2D5;
     margin:10px auto;
     width: 33%;
     
@@ -156,7 +156,7 @@ footer p a
 
 .tableborder
 {
-    background-color:rgb(241, 241, 193);
+    background-color:#AFC2D5;
     border:2px solid rgb(10, 11, 1);
     border-collapse: collapse;
     font-family:Arial, Helvetica, sans-serif;

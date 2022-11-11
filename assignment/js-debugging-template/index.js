@@ -27,7 +27,6 @@ const addListener = (id, callback, eventType = 'click') => {
     } 
     else {
       wordInput.classList.toggle('error', true); //Add error class to input
-      console.log(word);
     }
   };
   
@@ -91,8 +90,8 @@ const addListener = (id, callback, eventType = 'click') => {
     const li = document.createElement('li');
   
     const trashButton = document.createElement('div');
-    trashButton.classList('icon');
-    let trashIcon = document.createElement('li');
+    trashButton.classList.add('icon');
+    let trashIcon = document.createElement('i');
     trashIcon.classList.add('fa', 'fa-trash-alt');
     trashButton.addEventListener('click', deleteWord);
     trashButton.appendChild(trashIcon);
@@ -112,7 +111,7 @@ const addListener = (id, callback, eventType = 'click') => {
    */
   const deleteWord = e => {
     const li = e.currentTarget.parentNode;
-    li.parentNode.remove(li);
+    li.parentNode.removeChild(li);
   };
   
   /**

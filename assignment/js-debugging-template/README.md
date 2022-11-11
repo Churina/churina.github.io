@@ -57,15 +57,21 @@ Get into the habit of writing a README for every program you write. The more pra
 
 Changelog:
 
-1. _Line 27_: add closing curly brace below ;
-2. _Line 65_: add closing single quote in function body (document.getElementById('add-word').click());
-3. _line 8_:changed GetElementsByCLass to getElementById;
-4. _Line 16_:deleted n;
-//5. _Line 123_:change getNextWordsContainer().child to getNextWordsContainer().children;
-6. _Line 43_:change words to word;
-7. _Line 45_:change words to word;
-8. _Line 89_:change writeWrodToList to writeWordToList;
-9. _Line 94_:change <i> to <li>
-//10. _Line 135_:change next-words to next-word-list
+1. _line 8_: changed GetElementsByCLass to getElementById;
+2. _Line 19_: changed innerText to value;
+3. _Line 21_: deleted the "!" before the isValidWord;
+4. _Line 27_: added closing curly brace;
+5. _Line 43_: changed words to word;
+6. _Line 45_: changed words to word;
+7. _Line 65_: added closing single quote after 'add-word';
+8. _Line 80_: changed word.length < 3 to word.length >= 3;
+9.  _Line 89_: changed writeWrodToList to writeWordToList;
+10. _Line 93_: changed trashButton.class.add('icon') to trashButton.classList.add('icon');
+11. _Line 114_: changed li.parentNode.remove(li) to li.parentNode.removeChild(li)
+12. _Line 123_: changed getNextWordsContainer().child to getNextWordsContainer().children;
+13. _Line 129_: changed liElements to words;
+14. _Line 135_: changed next-words to next-word-list.
+
+
 
 

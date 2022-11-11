@@ -50,3 +50,22 @@ Get into the habit of writing a README for every program you write. The more pra
 [dillinger.io](https://dillinger.io/) - preview your README in browser
 
 [Purdue OWL](https://owl.purdue.edu/owl/general_writing/academic_writing/conciseness/index.html) - tips and tricks for keeping your writing concise and impactful
+
+
+
+
+
+Changelog:
+
+1. _Line 27_: add closing curly brace below ;
+2. _Line 65_: add closing single quote in function body (document.getElementById('add-word').click());
+3. _line 8_:changed GetElementsByCLass to getElementById;
+4. _Line 16_:deleted n;
+//5. _Line 123_:change getNextWordsContainer().child to getNextWordsContainer().children;
+6. _Line 43_:change words to word;
+7. _Line 45_:change words to word;
+8. _Line 89_:change writeWrodToList to writeWordToList;
+9. _Line 94_:change <i> to <li>
+//10. _Line 135_:change next-words to next-word-list
+
+

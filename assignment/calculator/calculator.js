@@ -1,4 +1,4 @@
-
+// traditional calculator
 let display = document.getElementById('display');
 let buttons = Array.from(document.getElementsByClassName('button'));
 buttons.map( button => 
@@ -29,6 +29,7 @@ buttons.map( button =>
     });
 
 
+//evercise calculator
 let buttons_2 = Array.from(document.querySelectorAll('button'));
 buttons_2.map(button => 
     {
@@ -37,31 +38,40 @@ buttons_2.map(button =>
             let output = document.getElementById('output'); 
             let num_1 = parseInt(document.getElementById('num_1').value);
             let num_2 = parseInt(document.getElementById('num_2').value);
-            switch(e.target.id)
+            if (!isNaN(num_1) && !isNaN(num_2))
             {
-                case 'add':
-                    output.textContent = `${num_1}+${num_2}=${num_1 + num_2}`;
-                    break;
-                case 'subtract':
-                    output.textContent = `${num_1}-${num_2}=${num_1 - num_2}`;
-                    break;
-                case 'multiply':
-                    output.textContent = `${num_1}*${num_2}=${num_1 * num_2}`;
-                    break;
-                case 'divide':
-                    if(num_2 != 0){
-                       output.textContent = `${num_1}/${num_2}=${num_1 / num_2}`;
-                    break; 
-                    } else {
-                       output.textContent ='Error: cannot divide by zero';
-                    }
-                case 'power' :
-                       output.textContent = num_1 ** num_2;
-                    break;
-                case 'square_root':
-                       output.textContent = Math. sqrt(num_1);
-                       break;
+                switch(e.target.id)
+                {
+                    case 'add':
+                        output.textContent = `${num_1}+${num_2}=${num_1 + num_2}`;
+                        break;
+                    case 'subtract':
+                        output.textContent = `${num_1}-${num_2}=${num_1 - num_2}`;
+                        break;
+                    case 'multiply':
+                        output.textContent = `${num_1}*${num_2}=${num_1 * num_2}`;
+                        break;
+                    case 'divide':
+                        if(num_2 != 0){
+                        output.textContent = `${num_1}/${num_2}=${num_1 / num_2}`;
+                        break; 
+                        } else {
+                        output.textContent = `error: cannot divide by zero.`;
+                        break;
+                        }
+                    case 'power' :
+                        output.textContent = `${num_1}^${num_2}=${num_1 ** num_2}`;
+                        break;
+                    //case 'square_root':
+                        //output.textContent = `Math.sqrt(num_1)`;
+                        //break;
+                }
+            } 
+            else 
+            {
+                output.textContent = `error: please enter number again.`
             }
+            
         })
     }
 

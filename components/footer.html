@@ -18,13 +18,8 @@
             <img src="images/button_validation_css.png" id="css_validation_button" width="88" height="31" alt="Validate webpage CSS." />
         </a>        
     <script>
-            const getHostname = (url) => {
-            // use URL constructor and return hostname
-            return new URL(url).hostname;
-            }
-            alert(getHostname);
-        document.getElementById("html_validation_button").setAttribute("src", "/..images/button_validation_html5.png");
-        document.getElementById("css_validation_button").setAttribute("src", "/..images/button_validation_css.png");
+        document.getElementById("html_validation_button").setAttribute("src", "/../images/button_validation_html5.png");
+        document.getElementById("css_validation_button").setAttribute("src", "/../images/button_validation_css.png");
         document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
         document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
     </script>       

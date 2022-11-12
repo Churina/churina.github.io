@@ -1,4 +1,33 @@
-.completed {
+.completed 
+{
   text-decoration: line-through;
   background-color: aqua;
+}
+
+body
+{
+   background-color:beige;
+   font-size: larger;
+}
+
+h1
+{
+  text-align: center;
+  color:blue;
+}
+
+.input
+{
+  text-align: center;
+  margin: 40px;
+  
+}
+
+.list
+{
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+  margin: 0 auto;
+
 }

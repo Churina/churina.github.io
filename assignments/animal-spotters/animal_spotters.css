@@ -97,8 +97,14 @@ label {
   color: azure;
 }
 
-#counter {
+#counter{
   font-size: 40px;
   font-weight: 700;
   margin: 0;
+}
+
+#output{
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 16px;
 }

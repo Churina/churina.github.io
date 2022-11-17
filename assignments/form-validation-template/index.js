@@ -33,7 +33,7 @@ for (const form of document.getElementsByTagName('form')){
       if (input. classList.contains('date') && !/\d{2}\/\d{2}\/\d{4}/.test(input.value.trim())){
         errorArray.push( "Date fields must match the format of XX/XX/XXXX.");
       }
-      if (input.classList.contains('phone') && !/\d{3}\/\d{3}\/\d{4}/.test(input.value.trim())){
+      if (input.classList.contains('phone') && !/\d{3}-\d{3}-\d{4}/.test(input.value.trim())){
         errorArray.push("Phone fields must match the format of XXX-XXX-XXXX.")
       }
       if (input.classList.contains('password') && !/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$/.test(input.value)){

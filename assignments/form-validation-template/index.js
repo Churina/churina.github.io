@@ -1,15 +1,13 @@
-//1.When to use "continue"?
-//2.set-->How to delete duplicate error message?
-//3.When we create list, why use 'document', instead of 'form'?
-//4.duplicate error messages occur when click validate button again.
-
 
 for (const form of document.getElementsByTagName('form')){
   form.addEventListener('submit', function(event){
-    //form.parentNode.querySelector('.errors').innerHTML = "";
+    form.parentNode.querySelector('.errors').innerText = "";
     const errorArray = [];
     const inputs = form.getElementsByTagName('input');
     for (const input of inputs){    
+      if (!input.classList.contains('required') && input.value.trim().length == 0){
+        continue;
+      } 
       if (input.classList.contains('required') && input.value.trim().length === 0) {
          // if (input.classList.contains('required') && input.value ===""){}
         errorArray.push("Required fields must have a value that is not empty or whitespace.");
@@ -46,7 +44,8 @@ for (const form of document.getElementsByTagName('form')){
       event.preventDefault();
       let errorLists = document.createElement('ul');
       errorLists.style = "color:red";
-      for (const error of errorArray){
+      const newErrorArray = [...new Set(errorArray)];
+      for (const error of newErrorArray){
         const errorList = document.createElement('li');
         const errorText = document.createTextNode(error);     
         errorList.appendChild(errorText);

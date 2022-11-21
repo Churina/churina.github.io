@@ -1,5 +1,3 @@
-// created functions of each check.
-
 const isValidAlphabetic = (input) =>{
   const regex = /^[a-z]+$/i;
   return regex.test(input.value);

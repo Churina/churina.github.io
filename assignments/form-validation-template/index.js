@@ -11,7 +11,7 @@ const isValidNumeric = (input) =>{
 }
 
 const isValidRequiredSize = (input) => {
-  return input.value.trim().length < input.minLength;
+  return input.value.trim().length === input.minLength;
 }
 
 const isValidUsername = (input) => {
@@ -20,12 +20,12 @@ const isValidUsername = (input) => {
 }
 
 const isValidDate = (input) => {
-  const regex = /\d{2}\/\d{2}\/\d{4}/;
+  const regex = /^\d{2}\/\d{2}\/\d{4}$/;
   return regex.test(input.value.trim());
 }
 
 const isValidPhone = (input) => {
-  const regex = /\d{3}-\d{3}-\d{4}/;
+  const regex = /^\d{3}-\d{3}-\d{4}$/;
   return regex.test(input.value.trim());
 }
 const isValidPassword = (input) => {
@@ -52,7 +52,7 @@ for (const form of document.getElementsByTagName('form')){
           if (input.classList.contains('numeric') && !isValidNumeric(input)){
             errorArray.push("Numeric fields must be a series of numbers."); 
           }
-          if (input.classList.contains('required_size') && isValidRequiredSize(input)){
+          if (input.classList.contains('required_size') && !isValidRequiredSize(input)){
             errorArray.push("Required_size field lengths must exactly match the minlength attribute of that field.");
             continue;
           }
